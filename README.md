@@ -23,4 +23,4 @@ TBD
 
 ### License
 
-[BSD-3-Clause](LICENSE) Copyright (c) LBRY Inc.
+[BSD-3-Clause](LICENSE) Copyright © LBRY Inc.
