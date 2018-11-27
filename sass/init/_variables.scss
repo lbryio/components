@@ -1,0 +1,41 @@
+:root {
+  @include root-prop(--spacing-xxs, 0.2rem);
+  @include root-prop(--spacing-xs, 0.4rem);
+  @include root-prop(--spacing-s, 0.8rem);
+  @include root-prop(--spacing-m, 1.6rem);
+  @include root-prop(--spacing-l, 2.4rem);
+  @include root-prop(--spacing-xl, 3.2rem);
+  @include root-prop(--spacing-xxl, 6.4rem);
+
+  // 12:5
+  @include root-prop(--aspect-ratio-bluray, 41.6666666667%);
+
+  // 11:4
+  @include root-prop(--aspect-ratio-panavision, 36.3636363636%);
+
+  // 4:3
+  @include root-prop(--aspect-ratio-sd, 75%);
+
+  // 16:9
+  @include root-prop(--aspect-ratio-standard, 56.25%);
+
+  // --spacing-xxs: 0.2rem;
+  // --spacing-xs: 0.4rem;
+  // --spacing-s: 0.8rem;
+  // --spacing-m: 1.6rem;
+  // --spacing-l: 2.4rem;
+  // --spacing-xl: 3.2rem;
+  // --spacing-xxl: 6.4rem;
+
+  // // 12:5
+  // --aspect-ratio-bluray: 41.6666666667%;
+
+  // // 11:4
+  // --aspect-ratio-panavision: 36.3636363636%;
+
+  // // 4:3
+  // --aspect-ratio-sd: 75%;
+
+  // // 16:9
+  // --aspect-ratio-standard: 56.25%;
+}

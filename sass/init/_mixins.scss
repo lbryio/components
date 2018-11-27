@@ -1,0 +1,7 @@
+// Use CSS variables without upsetting Sass-Lint
+// https://github.com/sasstools/sass-lint/issues/1161#issuecomment-390537190
+@mixin root-prop($prop: null, $value: null) {
+  @if ($prop and $value) {
+    #{$prop}: $value;
+  }
+}
