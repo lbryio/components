@@ -1,0 +1,47 @@
+.badge {
+  font-weight: 600;
+  vertical-align: top;
+  white-space: nowrap;
+
+  &:not(&--large) {
+    border-radius: 0.2rem;
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    line-height: 2;
+    padding-right: var(--spacing-xs); // 0.5rem;
+    padding-left: var(--spacing-xs); // 0.55rem;
+  }
+
+  &--cost:not(&--large) {
+    background-color: $lbry-yellow-2;
+
+    [data-mode="dark"] & {
+      background-color: $lbry-yellow-3;
+      color: $lbry-black;
+    }
+  }
+
+  &--free {
+    background-color: $lbry-blue-2;
+
+    [data-mode="dark"] & {
+      background-color: $lbry-blue-3;
+      color: $lbry-black;
+    }
+  }
+
+  &--large {
+    font-size: 5rem;
+    line-height: 1;
+  }
+
+  &--nsfw {
+    background-color: $lbry-grape-2;
+
+    [data-mode="dark"] & {
+      background-color: $lbry-grape-3;
+      color: $lbry-black;
+    }
+  }
+}

@@ -8,14 +8,20 @@
   },
   "description": "Styling for shared components across LBRY properties",
   "devDependencies": {
-    "@inc/sasslint-config": "^1.1.1",
+    "@inc/sasslint-config": "^1.1.2",
     "@lbry/color": "^1.0.5",
+    "husky": "^1.2.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.15.1",
     "sass-lint": "^1.12.1",
-    "updates": "^5.3.0"
+    "updates": "^5.4.0"
   },
   "homepage": "https://github.com/lbryio/components#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test:sass && git add -A :/"
+    }
+  },
   "license": "BSD-3-Clause",
   "name": "@lbry/components",
   "repository": {
@@ -23,11 +29,13 @@
     "url": "https://github.com/lbryio/components.git"
   },
   "scripts": {
+    "prepublish": "TODO: Add `npm run test:sass && npm run sass:prod` to this script",
     "sass:dev": "sass --load-path=node_modules --watch sass:dist --style compressed",
     "sass:prod": "sass --load-path=node_modules --update sass:dist --style compressed",
     "test": "run-s test:*",
     "test:dependencies": "updates --update ./",
-    "test:sass": "sass-lint --config ./node_modules/@inc/sasslint-config/config.json --verbose --no-exit"
+    "test:sass": "sass-lint --config ./node_modules/@inc/sasslint-config/config.json --verbose --no-exit",
+    "watch": "npm run sass:dev"
   },
   "version": "1.0.1"
 }
