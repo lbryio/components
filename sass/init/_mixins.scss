@@ -8,7 +8,7 @@
 // Omit value for basic text truncation
 @mixin constrict($value: null) {
   @if ($value) {
-    max-width: $value; // 20vw
+    max-width: $value;
   }
 
   overflow: hidden;

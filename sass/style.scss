@@ -1,8 +1,10 @@
 @charset "utf-8";
 
 @import "@lbry/color/lbry-color";
-@import "init/animation";
 @import "init/mixins";
 @import "init/variables";
+@import "init/reset";
+@import "init/animation";
 @import "badge";
+@import "button";
 @import "media";

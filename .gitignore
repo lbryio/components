@@ -5,6 +5,4 @@
 .sass-cache
 
 # Directories
-# it would be useful to commit the compiled CSS but let's disable this for now
-dist
 node_modules

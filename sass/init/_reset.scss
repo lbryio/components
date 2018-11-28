@@ -1,0 +1,158 @@
+html {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0; padding: 0;
+
+  border: none;
+  box-sizing: inherit;
+  outline: 0;
+  user-select: none;
+}
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+  // Remove touch delay on supported devices
+  touch-action: manipulation;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style-position: inside;
+
+  > li {
+    list-style-position: inside;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+label {
+  &[for] {
+    cursor: pointer;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+dd {
+  width: 80%;
+  float: left;
+}
+
+dl {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+dt {
+  width: 20%;
+  float: left;
+}
+
+img {
+  width: auto; max-width: 100%;
+  height: auto; max-height: 100%;
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+input {
+  background-color: transparent;
+  color: inherit;
+  // line-height: 1; // this can differ across apps
+
+  &::placeholder {
+    color: inherit;
+    opacity: 0.3;
+  }
+
+  &:not(:disabled) {
+    color: inherit;
+  }
+
+  &:not([type="checkbox"]),
+  &:not([type="file"]),
+  &:not([type="radio"]),
+  &:not([type="select"]) {
+    cursor: text;
+  }
+
+  &[type="checkbox"]:not(:disabled),
+  &[type="file"]:not(:disabled),
+  &[type="radio"]:not(:disabled),
+  &[type="select"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+}
+
+textarea {
+  width: 100%;
+  padding: var(--spacing-xs);
+  // border-color should be added in apps for blur/focus
+  border: 1px solid;
+}
