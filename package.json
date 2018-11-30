@@ -16,6 +16,10 @@
     "sass-lint": "^1.12.1",
     "updates": "^5.4.2"
   },
+  "files": [
+    "dist/style.css",
+    "sass/style.scss"
+  ],
   "homepage": "https://github.com/lbryio/components#readme",
   "husky": {
     "hooks": {
@@ -36,5 +40,5 @@
     "test:sass": "sass-lint --config ./node_modules/@inc/sasslint-config/config.json --verbose --no-exit",
     "watch": "npm run sass:dev"
   },
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
