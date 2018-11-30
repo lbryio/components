@@ -18,6 +18,7 @@
   },
   "files": [
     "dist/style.css",
+    "sass/init/mixins",
     "sass/style.scss"
   ],
   "homepage": "https://github.com/lbryio/components#readme",
@@ -40,5 +41,5 @@
     "test:sass": "sass-lint --config ./node_modules/@inc/sasslint-config/config.json --verbose --no-exit",
     "watch": "npm run sass:dev"
   },
-  "version": "1.0.2"
+  "version": "1.0.3"
 }
