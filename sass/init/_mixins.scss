@@ -28,6 +28,29 @@
   white-space: nowrap;
 }
 
+// Smart font include
+// Simply pass in the font-weight you want to use and the normal/italicized versions will be added
+// No more weighing down the front-end with references to unused weights
+// sass-lint:disable indentation
+@mixin font-face($font-weight, $font-style: "sans") {
+  @font-face {
+    font-family: "Inter UI";
+    font-style: normal;
+    font-weight: $font-weight;
+    src: url("../type/inter/#{$font-weight}.woff2") format("woff2"),
+         url("../type/inter/#{$font-weight}.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Inter UI";
+    font-style: italic;
+    font-weight: $font-weight;
+    src: url("../type/inter/#{$font-weight}i.woff2") format("woff2"),
+         url("../type/inter/#{$font-weight}i.woff") format("woff");
+  }
+}
+// sass-lint:enable indentation
+
 @mixin font-mono {
   font-family: "Input Mono", "Fira Mono", "Fira Code", "Courier New", monospace;
 }
@@ -87,7 +110,7 @@
   }
 }
 
-@mixin selection($background-color, $text-color) {
+@mixin selection($background-color: $lbry-white, $text-color: $lbry-black) {
   &::selection {
     background-color: $background-color;
     color: $text-color;
