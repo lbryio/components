@@ -1,3 +1,5 @@
+// sass-lint:disable no-important
+
 html {
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
@@ -17,6 +19,15 @@ html {
   user-select: none;
 }
 
+[readonly] {
+  cursor: not-allowed;
+}
+
+[type="button"],
+[type="submit"] {
+  cursor: pointer;
+}
+
 a,
 area,
 button,
@@ -34,9 +45,13 @@ button,
 input,
 select,
 textarea {
+  background-color: transparent;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
 
   &:disabled {
     cursor: default;
@@ -155,4 +170,87 @@ textarea {
   padding: var(--spacing-xs);
   // border-color should be added in apps for blur/focus
   border: 1px solid;
+
+  &:not([disabled]) {
+    resize: vertical;
+  }
+
+  &[disabled] {
+    resize: none;
+  }
+}
+
+
+
+@media print {
+  // Intelligent print styles
+  pre,
+  blockquote {
+    border: 1px solid #999 !important;
+    page-break-inside: avoid !important;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid !important;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3 !important;
+    widows: 3 !important;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid !important;
+  }
+
+  thead {
+    display: table-header-group !important;
+  }
+
+  // Faster, more stable printing
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    filter: none !important;
+    text-shadow: none !important;
+  }
+
+  p {
+    a {
+      &[href]::after { // Show hypertext data for links and abbreviations
+        content: " (" attr(href) ")" !important;
+      }
+
+      &[href^="javascript:"],
+      &[href^="#"] {
+        &::after {
+          content: "" !important;
+        }
+      }
+    }
+
+    abbr {
+      &[title]::after {
+        content: " (" attr(title) ")" !important;
+      }
+    }
+
+    a,
+    abbr {
+      text-decoration: underline !important;
+      word-wrap: break-word !important;
+    }
+  }
 }

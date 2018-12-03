@@ -14,21 +14,20 @@
     "npm-run-all": "^4.1.5",
     "sass": "^1.15.1",
     "sass-lint": "^1.12.1",
-    "updates": "^5.4.2"
+    "updates": "^5.4.3"
   },
   "files": [
     "dist/style.css",
-    "sass/*",
-    "index.js"
+    "sass/*"
   ],
   "homepage": "https://github.com/lbryio/components#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:sass && git add -A :/"
+      "pre-commit": "npm run test:sass && npm run sass:prod && git add -A :/"
     }
   },
   "license": "BSD-3-Clause",
-  "main": "lbry-components.json",
+  "main": "sass/",
   "name": "@lbry/components",
   "repository": {
     "type": "git",
