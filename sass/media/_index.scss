@@ -1,6 +1,19 @@
 //  C O N T A I N E R S
 
-.media-grid { // sass-lint:disable-line no-empty-rulesets
+.media-grid {
+  display: grid;
+
+  // set your own grid-gap
+  // example → grid-gap: var(--spacing-s);
+
+  // set your own grid-template
+  // example → @include create-grid(4);
+
+  .media {
+    width: 100%;
+    cursor: pointer;
+    vertical-align: top;
+  }
 }
 
 .media-list { // sass-lint:disable-line no-empty-rulesets
@@ -18,7 +31,6 @@
 
   &--large {
     display: flex;
-    font-size: 1.5rem;
 
     .media__info {
       width: calc(100% - 20rem);
@@ -139,7 +151,6 @@
 
   &__message {
     padding: var(--spacing-s); // 1rem;
-    font-size: 0.9rem;
     white-space: normal;
   }
 
@@ -163,8 +174,6 @@
   }
 
   &__text {
-    font-size: 2.5rem;
-
     [data-mode="dark"] & {
       color: $lbry-white;
     }

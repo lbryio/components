@@ -28,6 +28,10 @@
   white-space: nowrap;
 }
 
+@mixin create-grid($items-per-row: 4) {
+  grid-template: repeat(1, 1fr) / repeat($items-per-row, 1fr);
+}
+
 // Smart font include
 // Simply pass in the font-weight you want to use and the normal/italicized versions will be added
 // No more weighing down the front-end with references to unused weights
