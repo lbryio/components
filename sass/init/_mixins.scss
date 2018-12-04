@@ -76,6 +76,27 @@
   text-shadow: none;
 }
 
+// Cross-browser line-clamp support
+@mixin line-clamp(
+  $element-height: 2rem,
+  $row-count: 2,
+  $fade-color: $lbry-white,
+  $computed-position: relative
+) {
+  height: $element-height;
+  overflow: hidden;
+  position: $computed-position;
+
+  &::after {
+    width: 50%; height: calc(#{$element-height} / #{$row-count});
+    right: 0; bottom: 0;
+
+    background-image: linear-gradient(to right, rgba($lbry-white, 0), #{$fade-color} 80%);
+    content: "";
+    position: absolute;
+  }
+}
+
 @mixin no-user-select {
   user-select: none;
 
