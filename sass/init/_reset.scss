@@ -86,6 +86,14 @@ ul {
   -moz-user-select: text;
   -webkit-user-select: text;
 
+  > * {
+    user-select: inherit;
+
+    -ms-user-select: inherit;
+    -moz-user-select: inherit;
+    -webkit-user-select: inherit;
+  }
+
   > li {
     list-style-position: inside;
   }
@@ -209,6 +217,14 @@ p {
   -ms-user-select: text;
   -moz-user-select: text;
   -webkit-user-select: text;
+
+  > * {
+    user-select: inherit;
+
+    -ms-user-select: inherit;
+    -moz-user-select: inherit;
+    -webkit-user-select: inherit;
+  }
 }
 
 
