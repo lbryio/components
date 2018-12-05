@@ -66,11 +66,13 @@ h4,
 h5,
 h6 {
   font-weight: normal;
+  user-select: auto;
 }
 
 ol,
 ul {
   list-style-position: inside;
+  user-select: auto;
 
   > li {
     list-style-position: inside;
@@ -90,6 +92,7 @@ label {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  user-select: auto;
 }
 
 dd {
@@ -170,6 +173,7 @@ textarea {
   padding: var(--spacing-xs);
   // border-color should be added in apps for blur/focus
   border: 1px solid;
+  user-select: auto;
 
   &:not([disabled]) {
     resize: vertical;
@@ -178,6 +182,10 @@ textarea {
   &[disabled] {
     resize: none;
   }
+}
+
+p {
+  user-select: auto;
 }
 
 
