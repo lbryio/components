@@ -17,6 +17,10 @@ html {
   box-sizing: inherit;
   outline: 0;
   user-select: none;
+
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 [readonly] {
@@ -66,13 +70,21 @@ h4,
 h5,
 h6 {
   font-weight: normal;
-  user-select: auto;
+  user-select: text;
+
+  -ms-user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
 }
 
 ol,
 ul {
   list-style-position: inside;
-  user-select: auto;
+  user-select: text;
+
+  -ms-user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
 
   > li {
     list-style-position: inside;
@@ -92,7 +104,11 @@ label {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  user-select: auto;
+  user-select: text;
+
+  -ms-user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
 }
 
 dd {
@@ -138,7 +154,6 @@ button {
 input {
   background-color: transparent;
   color: inherit;
-  // line-height: 1; // this can differ across apps
 
   &::placeholder {
     color: inherit;
@@ -173,7 +188,11 @@ textarea {
   padding: var(--spacing-xs);
   // border-color should be added in apps for blur/focus
   border: 1px solid;
-  user-select: auto;
+  user-select: text;
+
+  -ms-user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
 
   &:not([disabled]) {
     resize: vertical;
@@ -185,7 +204,11 @@ textarea {
 }
 
 p {
-  user-select: auto;
+  user-select: text;
+
+  -ms-user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
 }
 
 
