@@ -3,7 +3,7 @@
   vertical-align: top;
   white-space: nowrap;
 
-  &:not(&--large) {
+  &:not(.badge--large) {
     border-radius: 0.2rem;
     display: inline-block;
     font-size: 0.8rem;
@@ -12,36 +12,36 @@
     padding-right: var(--spacing-xs); // 0.5rem;
     padding-left: var(--spacing-xs); // 0.55rem;
   }
+}
 
-  &--cost:not(&--large) {
-    background-color: $lbry-yellow-2;
+.badge--cost:not(.badge--large) {
+  background-color: $lbry-yellow-2;
 
-    [data-mode="dark"] & {
-      background-color: $lbry-yellow-3;
-      color: $lbry-black;
-    }
+  [data-mode="dark"] & {
+    background-color: $lbry-yellow-3;
+    color: $lbry-black;
   }
+}
 
-  &--free {
-    background-color: $lbry-blue-2;
+.badge--free {
+  background-color: $lbry-blue-2;
 
-    [data-mode="dark"] & {
-      background-color: $lbry-blue-3;
-      color: $lbry-black;
-    }
+  [data-mode="dark"] & {
+    background-color: $lbry-blue-3;
+    color: $lbry-black;
   }
+}
 
-  &--large {
-    font-size: 5rem;
-    line-height: 1;
-  }
+.badge--large {
+  font-size: 5rem;
+  line-height: 1;
+}
 
-  &--nsfw {
-    background-color: $lbry-grape-2;
+.badge--nsfw {
+  background-color: $lbry-grape-2;
 
-    [data-mode="dark"] & {
-      background-color: $lbry-grape-3;
-      color: $lbry-black;
-    }
+  [data-mode="dark"] & {
+    background-color: $lbry-grape-3;
+    color: $lbry-black;
   }
 }
