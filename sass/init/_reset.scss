@@ -70,21 +70,11 @@ h4,
 h5,
 h6 {
   font-weight: normal;
-  user-select: text;
-
-  -ms-user-select: text;
-  -moz-user-select: text;
-  -webkit-user-select: text;
 }
 
 ol,
 ul {
   list-style-position: inside;
-  user-select: text;
-
-  -ms-user-select: text;
-  -moz-user-select: text;
-  -webkit-user-select: text;
 
   > * {
     user-select: inherit;
@@ -112,11 +102,6 @@ label {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  user-select: text;
-
-  -ms-user-select: text;
-  -moz-user-select: text;
-  -webkit-user-select: text;
 }
 
 dd {
@@ -186,14 +171,6 @@ input {
     cursor: pointer;
   }
 
-  &[type="text"] {
-    user-select: text;
-
-    -ms-user-select: text;
-    -moz-user-select: text;
-    -webkit-user-select: text;
-  }
-
   &::-webkit-search-cancel-button {
     -webkit-appearance: none;
   }
@@ -204,11 +181,6 @@ textarea {
   padding: var(--spacing-xs);
   // border-color should be added in apps for blur/focus
   border: 1px solid;
-  user-select: text;
-
-  -ms-user-select: text;
-  -moz-user-select: text;
-  -webkit-user-select: text;
 
   &:not([disabled]) {
     resize: vertical;
@@ -219,13 +191,26 @@ textarea {
   }
 }
 
-p {
+code,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+table,
+ul,
+[type="text"] {
   user-select: text;
 
   -ms-user-select: text;
   -moz-user-select: text;
   -webkit-user-select: text;
+}
 
+p {
   > * {
     user-select: inherit;
 
