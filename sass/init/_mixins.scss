@@ -35,24 +35,24 @@
 // Smart font include
 // Simply pass in the font-weight you want to use and the normal/italicized versions will be added
 // No more weighing down the front-end with references to unused weights
-@mixin font-face($font-weight, $font-style: "sans") {
+@mixin font-face($font-weight, $relative-font-path, $font-name) {
   @font-face {
-    font-family: "Inter UI";
+    font-family: $font-name;
     font-style: normal;
     font-weight: $font-weight;
     // sass-lint:disable indentation
-    src: url("./type/inter/#{$font-weight}.woff2") format("woff2"),
-         url("./type/inter/#{$font-weight}.woff") format("woff");
+    src: url("#{$relative-font-path}/#{$font-weight}.woff2") format("woff2"),
+         url("#{$relative-font-path}/#{$font-weight}.woff") format("woff");
     // sass-lint:enable indentation
   }
 
   @font-face {
-    font-family: "Inter UI";
+    font-family: $font-name;
     font-style: italic;
     font-weight: $font-weight;
     // sass-lint:disable indentation
-    src: url("./type/inter/#{$font-weight}i.woff2") format("woff2"),
-         url("./type/inter/#{$font-weight}i.woff") format("woff");
+    src: url("#{$relative-font-path}/#{$font-weight}i.woff2") format("woff2"),
+         url("#{$relative-font-path}/#{$font-weight}i.woff") format("woff");
     // sass-lint:enable indentation
   }
 }

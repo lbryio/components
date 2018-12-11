@@ -18,8 +18,7 @@
   },
   "files": [
     "dist/style.css",
-    "sass/*",
-    "type/*"
+    "sass/*"
   ],
   "homepage": "https://github.com/lbryio/components#readme",
   "husky": {
