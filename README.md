@@ -45,4 +45,4 @@ They are nearly identical, save for `--watch` and `--update`. Please refer to th
 
 ### License
 
-[BSD-3-Clause](LICENSE) Copyright © LBRY Inc.
+[BSD 3-Clause](LICENSE) Copyright © LBRY Inc.

@@ -46,7 +46,7 @@
 }
 
 .button--inverse {
-  padding: var(--spacing-xs --spacing-s); // 0.5rem 1rem;
+  padding: var(--spacing-xs --spacing-s);
   border: 1px solid $lbry-gray-1;
   border-radius: 1rem;
   color: inherit;
@@ -90,7 +90,7 @@
 }
 
 .button--primary {
-  padding: var(--spacing-xs --spacing-s); // 0.5rem 1rem;
+  padding: var(--spacing-xs --spacing-s);
   align-self: center; // fixes buttons next to tall elements inside one with `display: flex`
   border-radius: 1rem;
   color: $lbry-white;
