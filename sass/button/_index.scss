@@ -15,6 +15,7 @@
 
 .button--disabled {
   opacity: 0.3;
+  pointer-events: none;
 }
 
 .button--icon {
@@ -72,7 +73,7 @@
 .button--link {
   transition: color 0.2s;
 
-  &:not(&--disabled):not(:hover) {
+  &:not(.button--disabled):not(:hover) {
     color: $lbry-teal-5;
 
     [data-mode="dark"] & {
@@ -80,7 +81,7 @@
     }
   }
 
-  &:not(&--disabled):hover {
+  &:not(.button--disabled):hover {
     color: $lbry-teal-3;
 
     [data-mode="dark"] & {
