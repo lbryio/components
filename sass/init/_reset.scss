@@ -16,11 +16,10 @@ html {
   border: none;
   box-sizing: inherit;
   outline: 0;
-  user-select: none;
+}
 
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
+[disabled] {
+  pointer-events: none;
 }
 
 [readonly] {
@@ -59,7 +58,6 @@ textarea {
 
   &:disabled {
     cursor: default;
-    pointer-events: none;
   }
 }
 
@@ -75,14 +73,6 @@ h6 {
 ol,
 ul {
   list-style-position: inside;
-
-  > * {
-    user-select: inherit;
-
-    -ms-user-select: inherit;
-    -moz-user-select: inherit;
-    -webkit-user-select: inherit;
-  }
 
   > li {
     list-style-position: inside;
@@ -188,36 +178,6 @@ textarea {
 
   &[disabled] {
     resize: none;
-  }
-}
-
-code,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol,
-p,
-table,
-ul,
-[type="text"] {
-  user-select: text;
-
-  -ms-user-select: text;
-  -moz-user-select: text;
-  -webkit-user-select: text;
-}
-
-code,
-p {
-  > * {
-    user-select: inherit;
-
-    -ms-user-select: inherit;
-    -moz-user-select: inherit;
-    -webkit-user-select: inherit;
   }
 }
 
