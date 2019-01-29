@@ -20,13 +20,19 @@ html {
 
 [disabled] {
   pointer-events: none;
+  resize: none;
 }
 
 [readonly] {
   cursor: not-allowed;
 }
 
+[for],
 [type="button"],
+[type="checkbox"],
+[type="file"],
+[type="radio"],
+[type="select"],
 [type="submit"] {
   cursor: pointer;
 }
@@ -81,12 +87,6 @@ ul {
 
 ul {
   list-style-type: none;
-}
-
-label {
-  &[for] {
-    cursor: pointer;
-  }
 }
 
 table {
@@ -147,20 +147,6 @@ input {
     color: inherit;
   }
 
-  &:not([type="checkbox"]),
-  &:not([type="file"]),
-  &:not([type="radio"]),
-  &:not([type="select"]) {
-    cursor: text;
-  }
-
-  &[type="checkbox"]:not(:disabled),
-  &[type="file"]:not(:disabled),
-  &[type="radio"]:not(:disabled),
-  &[type="select"]:not(:disabled) {
-    cursor: pointer;
-  }
-
   &::-webkit-search-cancel-button {
     -webkit-appearance: none;
   }
@@ -174,10 +160,6 @@ textarea {
 
   &:not([disabled]) {
     resize: vertical;
-  }
-
-  &[disabled] {
-    resize: none;
   }
 }
 
@@ -222,7 +204,8 @@ textarea {
 
   // Faster, more stable printing
   * {
-    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
     color: #000 !important;
     filter: none !important;
     text-shadow: none !important;
