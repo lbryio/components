@@ -1,0 +1,56 @@
+form {
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+
+  button,
+  input {
+    height: 2.5rem;
+    border-style: solid;
+    border-width: 1px;
+
+    &:not([type="button"]):not([type="submit"]) {
+      flex: 1;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      transition: border 0.2s;
+
+      &:not(:focus) {
+        border-top-color: $lbry-black;
+        border-right-color: transparent;
+        border-bottom-color: $lbry-black;
+        border-left-color: $lbry-black;
+      }
+
+      &:focus {
+        border-top-color: $lbry-teal-5;
+        border-right-color: transparent;
+        border-bottom-color: $lbry-teal-5;
+        border-left-color: $lbry-teal-5;
+      }
+    }
+
+    &[type="button"],
+    &[type="submit"] {
+      color: $lbry-white;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+      transition: all 0.2s;
+
+      &:not(:hover) {
+        background-color: $lbry-black;
+        border-color: $lbry-black;
+      }
+
+      &:hover {
+        background-color: $lbry-teal-3;
+        border-color: $lbry-teal-5;
+      }
+    }
+  }
+}
