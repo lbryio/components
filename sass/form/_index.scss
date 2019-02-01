@@ -1,8 +1,13 @@
-form {
+form,
+.form {
   margin-bottom: 1rem;
 }
 
-fieldset {
+fieldset,
+.fieldset {
+  // Flexbox is broken for fieldset elements in Chromium
+  // Source: https://bugs.chromium.org/p/chromium/issues/detail?id=375693
+  // Example: https://codepen.io/Garbee/pen/oYKMYp
   display: flex;
   font-size: 1rem;
   justify-content: center;
