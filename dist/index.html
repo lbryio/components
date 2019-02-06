@@ -27,6 +27,7 @@
       }
 
       section {
+        border-bottom: 1px solid var(--lbry-gray-1);
         margin-bottom: var(--spacing-l);
       }
 
@@ -41,9 +42,14 @@
       }
 
       h3 {
+        background-color: var(--lbry-black);
+        color: var(--lbry-white);
+        display: inline-block;
         font-size: 1.5rem;
         font-weight: bolder;
-        margin-bottom: var(--spacing-xs);
+        margin-bottom: var(--spacing-s);
+        padding: 0.25rem 1rem;
+        pointer-events: none;
       }
 
       p {
@@ -91,8 +97,14 @@
             <legend>Click some buttons</legend>
 
             <radio>
-              <input id="test-radio" type="radio">
-              <label for="test-radio">Radio button</label>
+              <input id="test-radio-1" name="toggle" type="radio">
+              <label for="test-radio-1">Radio button 1</label>
+              <check></check>
+            </radio>
+
+            <radio>
+              <input id="test-radio-2" name="toggle" type="radio">
+              <label for="test-radio-2">Radio button 2</label>
               <check></check>
             </radio>
           </fieldset>

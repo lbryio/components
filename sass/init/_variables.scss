@@ -15,6 +15,9 @@
   @include root-prop(--aspect-ratio-standard, 56.25%); // 16:9
 
   // Color
+  @include root-prop(--lbry-black, $lbry-black);
+  @include root-prop(--lbry-white, $lbry-white);
+
   @include root-prop(--lbry-gray-1, $lbry-gray-1);
   @include root-prop(--lbry-gray-2, $lbry-gray-2);
   @include root-prop(--lbry-gray-3, $lbry-gray-3);

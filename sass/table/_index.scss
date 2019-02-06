@@ -1,14 +1,10 @@
 
 table {
   width: 100%;
-
   background-color: $lbry-white;
-  border: 1px solid $lbry-black;
   position: relative;
 
   thead {
-    background-color: $lbry-black;
-    color: $lbry-white;
     cursor: default;
     position: relative;
 
@@ -22,8 +18,12 @@ table {
     line-height: 1.55;
   }
 
-  tr:nth-of-type(even) {
-    background-color: $lbry-gray-1;
+  tr {
+    &:not(:last-of-type) {
+      td {
+        border-bottom: 1px solid $lbry-gray-1;
+      }
+    }
   }
 
   th,
@@ -32,13 +32,10 @@ table {
   }
 
   th {
+    border-bottom: 2px solid $lbry-black;
     letter-spacing: 0.1rem;
     text-align: left;
     text-transform: uppercase;
-  }
-
-  tbody tr:not(:last-of-type) td {
-    border-bottom: 1px solid $lbry-gray-1;
   }
 
   a {

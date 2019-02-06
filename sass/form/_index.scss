@@ -1,38 +1,19 @@
 form {
+  // setting the font size here sizes everything within
   margin-bottom: 1rem;
 }
 
 fieldset {
-  // Flexbox is broken for fieldset elements in Chromium
-  // Source: https://bugs.chromium.org/p/chromium/issues/detail?id=375693
-  // Example: https://codepen.io/Garbee/pen/oYKMYp
-  // display: flex; //
-  // justify-content: center; //
-
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  border-top: 1px solid $lbry-gray-1;
+  margin-bottom: 1.5rem;
   position: relative;
-
-  // @supports (not (-moz-appearance: none)) {
-  //   display: block;
-  // }
 
   button,
   input {
-    // height: 2.5rem;
-    // border-style: solid;
-    // border-width: 1px;
-
     &:not([type="button"]):not([type="radio"]):not([type="submit"]) {
-      // flex: 1; //
       padding-right: 1rem;
       padding-left: 1rem;
       transition: border 0.2s;
-
-      // @supports (not (-moz-appearance: none)) {
-      //   width: calc(100% - 10rem);
-      //   float: left;
-      // }
 
       &:not(:focus) {
         border-top-color: $lbry-black;
@@ -56,11 +37,6 @@ fieldset {
       padding-left: 1.5rem;
       transition: all 0.2s;
 
-      // @supports (not (-moz-appearance: none)) {
-      //   width: 10rem;
-      //   float: right;
-      // }
-
       &:not(:hover) {
         background-color: $lbry-black;
         border-color: $lbry-black;
@@ -74,22 +50,53 @@ fieldset {
   }
 }
 
+legend {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid $lbry-gray-1;
+  margin-bottom: 1rem;
+  pointer-events: none;
+}
 
+check {
+  width: 1.5rem; height: 1.5rem;
+  top: 0; left: 0;
+
+  border: 2px solid;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  transition: border 0.2s;
+  z-index: 5;
+
+  &::before {
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+
+    border-radius: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    transform: scale(0.6);
+    transition: background-color 0.2s;
+  }
+}
 
 radio {
   min-height: 2rem;
   align-items: center;
   display: inline-flex;
   flex-direction: row-reverse;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   position: relative;
 
   &:hover {
     label {
-      color: $lbry-teal-3;
+      color: $lbry-teal-4;
     }
 
     check {
-      border-color: $lbry-teal-3;
+      border-color: $lbry-teal-4;
     }
   }
 
@@ -111,37 +118,14 @@ radio {
 
       &:checked {
         + label {
-          color: $lbry-teal-3;
+          color: $lbry-teal-4;
         }
 
         + label + check::before {
-          background-color: $lbry-teal-3;
+          background-color: $lbry-teal-4;
         }
       }
     }
-  }
-}
-
-check {
-  width: 1.5rem; height: 1.5rem;
-  top: 0; left: 0;
-
-  border: 2px solid;
-  border-radius: 50%;
-  display: block;
-  position: relative;
-  transition: border 0.2s;
-  z-index: 5;
-
-  &::before {
-    width: 0.75rem; height: 0.75rem;
-    top: 0.24rem; left: 0.24rem;
-
-    border-radius: 50%;
-    content: "";
-    display: block;
-    position: absolute;
-    transition: background-color 0.2s;
   }
 }
 
