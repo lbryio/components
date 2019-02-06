@@ -1,0 +1,47 @@
+
+table {
+  width: 100%;
+
+  background-color: $lbry-white;
+  border: 1px solid $lbry-black;
+  position: relative;
+
+  thead {
+    background-color: $lbry-black;
+    color: $lbry-white;
+    cursor: default;
+    position: relative;
+
+    tr {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  tbody {
+    line-height: 1.55;
+  }
+
+  tr:nth-of-type(even) {
+    background-color: $lbry-gray-1;
+  }
+
+  th,
+  td {
+    padding: 0.5rem 1rem;
+  }
+
+  th {
+    letter-spacing: 0.1rem;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  tbody tr:not(:last-of-type) td {
+    border-bottom: 1px solid $lbry-gray-1;
+  }
+
+  a {
+    font-weight: bolder;
+  }
+}

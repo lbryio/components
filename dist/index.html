@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Components by LBRY</title>
+
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@master/distr/fira_code.css"/>
+    <link rel="stylesheet" href="./index.css"/>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        font-family: var(--font-sans);
+        padding: var(--spacing-l);
+      }
+
+      header {
+        border-bottom: 1px solid var(--lbry-gray-1);
+        margin-bottom: var(--spacing-l);
+      }
+
+      main {
+        flex: 1;
+        min-height: 100vh;
+      }
+
+      section {
+        margin-bottom: var(--spacing-l);
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: bolder;
+      }
+
+      h2 {
+        font-size: 2rem;
+        padding-bottom: var(--spacing-s);
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        margin-bottom: var(--spacing-xs);
+      }
+
+      p {
+        font-size: 1.25rem;
+        margin-bottom: var(--spacing-s);
+      }
+
+      hr {
+        margin-bottom: var(--spacing-s);
+      }
+
+      footer {
+        border-top: 1px solid var(--lbry-gray-1);
+        color: var(--lbry-gray-5);
+        padding-top: var(--spacing-l);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>@lbry/components</h1>
+      <h2>Styling for shared components across LBRY properties</h2>
+    </header>
+
+    <main>
+      <section>
+        <p>Hello and whaddup!</p>
+      </section>
+
+      <section>
+        <h3>Form</h3>
+
+        <form>
+          <fieldset>
+            <legend>Subscribe to our newsletter</legend>
+
+            <input-submit>
+              <input id="emailAddress" placeholder="you@domain.tld" type="text"/>
+              <button title="Subscribe to our technical newsletter" type="button">Subscribe</button>
+            </input-submit>
+          </fieldset>
+
+          <fieldset>
+            <legend>Click some buttons</legend>
+
+            <radio>
+              <input id="test-radio" type="radio">
+              <label for="test-radio">Radio button</label>
+              <check></check>
+            </radio>
+          </fieldset>
+        </form>
+      </section>
+
+      <section>
+        <h3>Table</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Language (Toolset)</th>
+              <th>What Is It</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><a href="https://github.com/lbryio/lbrycrd" rel="noopener noreferrer" target="_blank">lbrycrd</a></td>
+              <td>C++</td>
+              <td>A full node for the LBRY blockchain, including a standalone wallet. Used by miners and some applications. Most consumer applications do not bundle <a class="link--glossary" href="/glossary#lbrycrd">lbrycrd</a> directly, and instead bundle <a class="link--glossary" href="/glossary#lbry-sdk">lbry-sdk</a>.</td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/lbryio/lbry" rel="noopener noreferrer" target="_blank">lbry-sdk</a></td>
+              <td>Python (asyncio)</td>
+              <td>A daemon that can be used directly or to develop other applications. Provides convenience <a href="/api/sdk">APIs</a>, bundles an SPV wallet (<a class="link--glossary" href="/glossary#torba">torba</a>), and contains an implementation of the LBRY data network.</td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/lbryio/torba" rel="noopener noreferrer" target="_blank">torba</a></td>
+              <td>Python</td>
+              <td>An <a class="link--glossary" href="/glossary#SPV">SPV</a> (Simple Payment Verification) wallet. Bundled with <a class="link--glossary" href="/glossary#lbry-sdk">lbry-sdk</a>.</td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/lbryio/lbry/tree/master/lbrynet/extras/wallet/server" rel="noopener noreferrer" target="_blank">wallet server</a></td>
+              <td>Protobuf, Python</td>
+              <td>The wallet server used by <a class="link--glossary" href="/glossary#torba">torba</a>.</td>
+            </tr>
+            <tr>
+              <td><a href="https://github.com/lbryio/lbry/tree/master/lbrynet/schema" rel="noopener noreferrer" target="_blank">schema</a></td>
+              <td>Protobuf, Python</td>
+              <td>Defines the structure of the metadata stored in the LBRY blockchain.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>Copyright © 2018-2019, LBRY Inc. | BSD 3-Clause Licensed.</footer>
+  </body>
+</html>

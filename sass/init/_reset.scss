@@ -2,6 +2,7 @@
 
 html {
   box-sizing: border-box;
+  font-size: 12px;
   text-rendering: optimizeLegibility;
 
   -moz-osx-font-smoothing: grayscale;
@@ -28,6 +29,7 @@ html {
 }
 
 [for],
+[role="button"],
 [type="button"],
 [type="checkbox"],
 [type="file"],
@@ -90,8 +92,10 @@ ul {
 }
 
 table {
-  border-collapse: collapse;
+  // border-collapse: collapse;
   border-spacing: 0;
+
+  // -webkit-appearance: none;
 }
 
 dd {
@@ -132,6 +136,11 @@ button {
   &:disabled {
     opacity: 0.3;
   }
+}
+
+hr {
+  width: 100%; height: 1px;
+  background-color: $lbry-gray-1;
 }
 
 input {
