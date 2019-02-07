@@ -15,6 +15,12 @@ If you are using `@lbry/components`, you can safely remove [@lbry/color](https:/
 
 
 
+### Demo
+
+Check out `index.html` in the `dist` folder.
+
+
+
 ### Usage
 
 Your main Sass file:

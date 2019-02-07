@@ -1,5 +1,3 @@
-// sass-lint:disable no-important
-
 html {
   box-sizing: border-box;
   font-size: 12px;
@@ -92,10 +90,7 @@ ul {
 }
 
 table {
-  // border-collapse: collapse;
   border-spacing: 0;
-
-  // -webkit-appearance: none;
 }
 
 dd {
@@ -149,7 +144,7 @@ input {
 
   &::placeholder {
     color: inherit;
-    opacity: 0.3;
+    opacity: 0.2;
   }
 
   &:not(:disabled) {
@@ -161,9 +156,15 @@ input {
   }
 }
 
+select {
+  border-radius: 0;
+  outline: none;
+}
+
 textarea {
   width: 100%;
-  padding: var(--spacing-xs);
+  min-height: var(--spacing-xxl);
+  padding: var(--spacing-s);
   // border-color should be added in apps for blur/focus
   border: 1px solid;
 
@@ -175,10 +176,11 @@ textarea {
 
 
 @media print {
+  // sass-lint:disable-block no-important
   // Intelligent print styles
   pre,
   blockquote {
-    border: 1px solid #999 !important;
+    border: 1px solid $lbry-gray-5 !important;
     page-break-inside: avoid !important;
   }
 
@@ -215,7 +217,7 @@ textarea {
   * {
     background-color: transparent !important;
     background-image: none !important;
-    color: #000 !important;
+    color: $lbry-black !important;
     filter: none !important;
     text-shadow: none !important;
   }

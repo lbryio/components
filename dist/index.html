@@ -94,19 +94,51 @@
           </fieldset>
 
           <fieldset>
+            <legend>Become a Gym Leader</legend>
+
+            <fieldset-group>
+              <fieldset-section>
+                <label for="name">Name</label>
+                <input id="name" placeholder="Will Smith" type="text"/>
+              </fieldset-section>
+
+              <fieldset-section>
+                <label for="starter">Pokémon</label>
+                <select id="starter">
+                  <option disabled selected>Choose a Pokémon</option>
+                  <option>Bulbasaur</option>
+                  <option>Charmander</option>
+                  <option>Squirtle</option>
+                </select>
+              </fieldset-section>
+            </fieldset-group>
+
+            <fieldset-section class="full-width">
+              <label for="notes">Notes</label>
+              <textarea id="notes"></textarea>
+            </fieldset-section>
+          </fieldset>
+
+          <fieldset>
             <legend>Click some buttons</legend>
 
-            <radio>
+            <radio-element>
               <input id="test-radio-1" name="toggle" type="radio">
               <label for="test-radio-1">Radio button 1</label>
-              <check></check>
-            </radio>
+              <radio-toggle/>
+            </radio-element>
 
-            <radio>
+            <radio-element>
               <input id="test-radio-2" name="toggle" type="radio">
               <label for="test-radio-2">Radio button 2</label>
-              <check></check>
-            </radio>
+              <radio-toggle/>
+            </radio-element>
+
+            <checkbox-element>
+              <input id="test-checkbox-1" name="check" type="checkbox">
+              <label for="test-checkbox-1">Checkbox</label>
+              <checkbox-toggle/>
+            </checkbox-element>
           </fieldset>
         </form>
       </section>

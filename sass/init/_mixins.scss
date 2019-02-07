@@ -168,6 +168,47 @@
   }
 }
 
+@mixin tick {
+  min-height: 2rem;
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  margin-right: var(--spacing-s);
+  margin-bottom: var(--spacing-s);
+  position: relative;
+
+  &:hover {
+    label {
+      color: $lbry-teal-4;
+    }
+  }
+
+  label {
+    padding-left: var(--spacing-xs);
+    transition: color 0.2s;
+  }
+}
+
+@mixin tick-toggle {
+  width: var(--spacing-m); height: var(--spacing-m);
+  top: 0; left: 0;
+
+  border: 2px solid;
+  display: block;
+  position: relative;
+  transition: border 0.2s;
+  z-index: 5;
+
+  &::before {
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+
+    content: "";
+    display: block;
+    position: absolute;
+  }
+}
+
 @mixin underline($text-color: $lbry-black, $whitespace-color: $lbry-white) {
   @include selection($text-color, $whitespace-color);
 
