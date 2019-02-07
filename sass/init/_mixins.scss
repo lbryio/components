@@ -171,6 +171,7 @@
 @mixin tick {
   min-height: 2rem;
   align-items: center;
+  align-self: start;
   display: inline-flex;
   flex-direction: row-reverse;
   margin-right: var(--spacing-s);
