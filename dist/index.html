@@ -82,6 +82,21 @@
         color: var(--lbry-gray-5);
         padding: var(--spacing-l);
       }
+
+      .social-links a {
+        width: 1.25rem; height: 1.25rem;
+
+        background-color: var(--lbry-black);
+        color: transparent;
+        display: inline-block;
+        font-size: 0;
+        border-radius: 50%;
+        line-height: 0;
+      }
+
+      .social-links a:not(:last-of-type) {
+        margin-right: 0.5rem;
+      }
     </style>
   </head>
 
@@ -117,12 +132,16 @@
                 </a>
               </drawer-child>
 
-              <drawer-child>
+              <drawer-child class="social-links">
                 <div>
                   <strong>Social</strong>
-                  <span>Connect with the LBRY team on your favorite platform</span>
-                  <a href="">Facebook</a>
-                  <a href="">Twitter</a>
+                  <span>
+                    <a href="">Network 1</a>
+                    <a href="">Network 2</a>
+                    <a href="">Network 3</a>
+                    <a href="">Network 4</a>
+                    <a href="">Network 5</a>
+                  </span>
                 </div>
               </drawer-child>
 
@@ -150,40 +169,33 @@
           </drawer-wrap>
         </drawer-section>
 
-        <drawer-section class="header__navigation-parent">
+        <drawer-section>
           <drawer-title>Link II</drawer-title>
 
-          <drawer-wrap class="header__navigation-children-wrap">
-            <drawer-children class="header__navigation-children inner-wrap">
-              <drawer-child class="flex-half">
-                <a href="/youtube">
+          <drawer-wrap>
+            <drawer-children>
+              <drawer-child>
+                <a href="">
                   <strong>YouTube Partner Program</strong>
                   <span>Bring all your content to LBRY with just a few clicks</span>
                 </a>
               </drawer-child>
 
-              <drawer-child class="flex-half">
+              <drawer-child>
                 <a href="">
                   <strong>Creator FAQ</strong>
                   <span>Like the FAQ, but for Creators</span>
                 </a>
               </drawer-child>
 
-              <drawer-child class="flex-half">
-                <a href="https://lbry.fund">
+              <drawer-child>
+                <a href="">
                   <strong>Fund a Project</strong>
                   <span>How to to get some LBC for your latest idea or project</span>
                 </a>
               </drawer-child>
 
-              <drawer-child class="flex-half">
-                <a href="">
-                  <strong>Creator Tour</strong>
-                  <span>XYZXYZXYZ</span>
-                </a>
-              </drawer-child>
-
-              <drawer-child class="flex-half">
+              <drawer-child>
                 <a href="">
                   <strong>Makers</strong>
                   <span>Would you like to share and sell 3D printable files?</span>
@@ -193,34 +205,34 @@
           </drawer-wrap>
         </drawer-section>
 
-        <drawer-section class="header__navigation-parent">
+        <drawer-section>
           <drawer-title>Link III</drawer-title>
 
-          <drawer-wrap class="header__navigation-children-wrap">
-            <drawer-children class="header__navigation-children inner-wrap">
-              <drawer-child class="flex-half">
-                <a href="/team">
+          <drawer-wrap>
+            <drawer-children>
+              <drawer-child>
+                <a href="">
                   <strong>Team / About</strong>
                   <span>Meet the people building LBRY and find out why they’re doing it</span>
                 </a>
               </drawer-child>
 
-              <drawer-child class="flex-half">
-                <a href="/join-us">
+              <drawer-child>
+                <a href="">
                   <strong>Join Us</strong>
                   <span>Work with the LBRY team</span>
                 </a>
               </drawer-child>
 
-              <drawer-child class="flex-half">
+              <drawer-child>
                 <a href="">
                   <strong>Contact</strong>
                   <span>Have a question or want to connect with the LBRY, Inc. team?</span>
                 </a>
               </drawer-child>
 
-              <drawer-child class="flex-half">
-                <a href="/credit-reports">
+              <drawer-child>
+                <a href="">
                   <strong>Credit Reports</strong>
                   <span>Four times a year we share the current state of LBRY, Inc.'s balance sheet</span>
                 </a>
@@ -229,36 +241,29 @@
           </drawer-wrap>
         </drawer-section>
 
-        <drawer-section class="header__navigation-parent">
+        <drawer-section>
           <drawer-title>Link IV</drawer-title>
 
-          <drawer-wrap class="header__navigation-children-wrap">
-            <drawer-children class="header__navigation-children inner-wrap">
-              <drawer-child class="flex-half">
-                <a href="https://lbry.tech">
+          <drawer-wrap>
+            <drawer-children>
+              <drawer-child>
+                <a href="">
                   <strong>LBRY.tech</strong>
                   <span>Find out how the heck all of this works</span>
                 </a>
               </drawer-child>
 
-              <drawer-child class="flex-half">
-                <a href="https://github.com/lbryio/lbry.io">
+              <drawer-child>
+                <a href="">
                   <strong>GitHub</strong>
                   <span>The LBRY code is open source, check out the repos</span>
                 </a>
               </drawer-child>
 
-              <drawer-child class="flex-half">
-                <a href="https://lbry.tech/contribute">
+              <drawer-child>
+                <a href="">
                   <strong>Contributor's Guide</strong>
                   <span>Tips and guidelines for being a contributor to the LBRY projects</span>
-                </a>
-              </drawer-child>
-
-              <drawer-child class="flex-half">
-                <a href="https://forum.lbry.tech">
-                  <strong>Forum</strong>
-                  <span>If you have a question for the LBRY, Inc. development team, post it here</span>
                 </a>
               </drawer-child>
             </drawer-children>
