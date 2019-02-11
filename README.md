@@ -17,7 +17,7 @@ If you are using `@lbry/components`, you can safely remove [@lbry/color](https:/
 
 ### Demo
 
-Check out `index.html` in the `dist` folder.
+[https://lbryio.github.io/components](https://lbryio.github.io/components)
 
 
 
