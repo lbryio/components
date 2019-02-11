@@ -28,7 +28,7 @@ Your main Sass file:
 ```scss
 @charset "utf-8";
 
-@import "@lbry/components/sass/";
+@import "~@lbry/components/sass/";
 // ...your other Sass imports
 ```
 
