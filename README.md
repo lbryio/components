@@ -49,6 +49,16 @@ They are nearly identical, save for `--watch` and `--update`. Please refer to th
 
 
 
+### Note
+
+To use with Webpack, you have to make use of the tilde character when referencing a file inside your `node_modules` folder. Like so:
+
+```scss
+@import "~@lbry/components/sass/";
+```
+
+
+
 ### License
 
 [BSD 3-Clause](LICENSE) Copyright © LBRY Inc.
