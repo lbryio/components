@@ -149,8 +149,7 @@ checkbox-element {
 
   input {
     &[type="checkbox"] {
-      width: 0;
-      height: 0;
+      width: 0; height: 0;
       visibility: hidden;
 
       &:not(:checked) {
@@ -194,8 +193,7 @@ radio-element {
 
   input {
     &[type="radio"] {
-      width: 0;
-      height: 0;
+      width: 0; height: 0;
       visibility: hidden;
 
       &:not(:checked) {
