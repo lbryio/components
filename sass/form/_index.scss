@@ -1,23 +1,33 @@
 form {
   // setting the font size here sizes everything within
-  margin-bottom: var(--spacing-s);
+  &:not(:last-child) {
+    margin-bottom: var(--spacing-s);
+  }
 
-  button,
+  button:not(.button--link),
   input,
   select {
     height: var(--spacing-l);
     border: 1px solid;
   }
 
+  select,
+  radio-element,
+  checkbox-element {
+    cursor: pointer;
+  }
+
   [type="email"],
-  [type="text"] {
+  [type="text"],
+  [type="number"],
+  [type="password"] {
     padding-right: var(--spacing-s);
     padding-left: var(--spacing-s);
     transition: border 0.2s;
   }
 
-  [type="button"],
-  [type="submit"] {
+  [type="submit"],
+  .button--primary {
     color: $lbry-white;
     padding-right: var(--spacing-m);
     padding-left: var(--spacing-m);
@@ -139,7 +149,8 @@ checkbox-element {
 
   input {
     &[type="checkbox"] {
-      width: 0; height: 0;
+      width: 0;
+      height: 0;
       visibility: hidden;
 
       &:not(:checked) {
@@ -183,7 +194,8 @@ radio-element {
 
   input {
     &[type="radio"] {
-      width: 0; height: 0;
+      width: 0;
+      height: 0;
       visibility: hidden;
 
       &:not(:checked) {
@@ -217,8 +229,6 @@ radio-toggle {
     transition: background-color 0.2s;
   }
 }
-
-
 
 // Custom elements are apparently difficult to use in React, so use classes
 

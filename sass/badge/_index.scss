@@ -16,10 +16,10 @@
 
 .badge--cost:not(.badge--large) {
   background-color: $lbry-yellow-2;
+  color: $lbry-black;
 
   [data-mode="dark"] & {
     background-color: $lbry-yellow-3;
-    color: $lbry-black;
   }
 }
 
@@ -33,7 +33,7 @@
 }
 
 .badge--large {
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 1;
 }
 
@@ -48,5 +48,10 @@
 
 .badge--primary {
   background-color: $lbry-teal-5;
+  color: $lbry-white;
+}
+
+.badge--alert {
+  background-color: $lbry-red-2;
   color: $lbry-white;
 }
