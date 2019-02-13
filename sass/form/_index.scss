@@ -11,16 +11,16 @@ form {
     border: 1px solid;
   }
 
-  select,
+  checkbox-element,
   radio-element,
-  checkbox-element {
+  select {
     cursor: pointer;
   }
 
   [type="email"],
-  [type="text"],
   [type="number"],
-  [type="password"] {
+  [type="password"]
+  [type="text"] {
     padding-right: var(--spacing-s);
     padding-left: var(--spacing-s);
     transition: border 0.2s;
