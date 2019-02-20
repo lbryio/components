@@ -55,6 +55,7 @@ input,
 select,
 textarea {
   background-color: transparent;
+  border-radius: 0;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -157,7 +158,6 @@ input {
 }
 
 select {
-  border-radius: 0;
   outline: none;
 }
 
