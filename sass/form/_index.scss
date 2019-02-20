@@ -26,6 +26,7 @@ form {
     transition: border 0.2s;
   }
 
+  [type="button"],
   [type="submit"],
   .button--primary {
     color: $lbry-white;
