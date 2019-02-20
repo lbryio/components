@@ -26,8 +26,8 @@ form {
     transition: border 0.2s;
   }
 
-  [type="button"],
   [type="submit"],
+  [type='button']:not(.button--link),
   .button--primary {
     color: $lbry-white;
     padding-right: var(--spacing-m);
