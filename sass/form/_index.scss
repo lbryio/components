@@ -19,7 +19,7 @@ form {
 
   [type="email"],
   [type="number"],
-  [type="password"]
+  [type="password"],
   [type="text"] {
     padding-right: var(--spacing-s);
     padding-left: var(--spacing-s);
@@ -90,6 +90,7 @@ fieldset-section {
 
   [type="email"],
   [type="text"],
+  [type="number"],
   select,
   textarea {
     &:not(:focus) {
@@ -149,7 +150,8 @@ checkbox-element {
 
   input {
     &[type="checkbox"] {
-      width: 0; height: 0;
+      width: 0;
+      height: 0;
       visibility: hidden;
 
       &:not(:checked) {
@@ -193,7 +195,8 @@ radio-element {
 
   input {
     &[type="radio"] {
-      width: 0; height: 0;
+      width: 0;
+      height: 0;
       visibility: hidden;
 
       &:not(:checked) {
