@@ -93,8 +93,8 @@ fieldset-section {
   }
 
   [type="email"],
-  [type="text"],
   [type="number"],
+  [type="text"],
   select,
   textarea {
     &:not(:focus) {
