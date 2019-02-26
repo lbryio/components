@@ -3,6 +3,18 @@
   justify-content: space-between;
 }
 
+@mixin breakpoint-max($breakpoint) {
+  @media (max-width: #{$breakpoint}px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-min($breakpoint) {
+  @media (min-width: #{$breakpoint}px) {
+    @content;
+  }
+}
+
 @mixin center {
   align-items: center;
   display: inline-flex;
