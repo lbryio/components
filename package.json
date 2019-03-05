@@ -22,7 +22,7 @@
   "homepage": "https://github.com/lbryio/components#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:sass; npm run sass:prod"
+      "pre-commit": "npm run test:sass && npm run sass:prod"
     }
   },
   "license": "BSD-3-Clause",
