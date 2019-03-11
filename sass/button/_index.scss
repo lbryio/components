@@ -16,7 +16,16 @@
 
 .button--disabled {
   opacity: 0.3;
-  pointer-events: none;
+
+  &:not([disabled]) {
+    pointer-events: none;
+
+    &:hover {
+      background-color: inherit;
+      color: inherit;
+      fill: inherit;
+    }
+  }
 }
 
 .button--icon {
@@ -25,7 +34,7 @@
   background-repeat: no-repeat;
   background-size: 50%;
   border-radius: 50%;
-  color: $lbry-white;
+  color: var(--lbry-white);
   transition: background-color 0.2s;
 
   &:not(:hover) {
@@ -33,7 +42,7 @@
   }
 
   &:hover {
-    background-color: $lbry-green-3;
+    background-color: var(--lbry-green-3);
   }
 
   &.button--play {
@@ -49,7 +58,7 @@
 
 .button--inverse {
   padding: var(--spacing-xs) var(--spacing-s); // sass-lint:disable-line shorthand-values
-  border: 1px solid $lbry-gray-1;
+  border: 1px solid var(--lbry-gray-1);
   border-radius: 1rem;
   color: inherit;
   transition: background-color 0.2s;
@@ -63,7 +72,7 @@
   }
 
   &:hover {
-    background-color: $lbry-gray-1;
+    background-color: var(--lbry-gray-1);
 
     [data-mode="dark"] & {
       background-color: rgba($lbry-white, 0.1);
@@ -72,19 +81,19 @@
 }
 
 .button--link {
-  color: $lbry-teal-5;
+  color: var(--lbry-teal-5);
   transition: color 0.2s;
   word-break: break-all;
 
   [data-mode="dark"] & {
-    color: $lbry-teal-3;
+    color: var(--lbry-teal-3);
   }
 
   &:hover {
-    color: $lbry-teal-3;
+    color: var(--lbry-teal-3);
 
     [data-mode="dark"] & {
-      color: $lbry-teal-4;
+      color: var(--lbry-teal-4);
     }
   }
 }
@@ -93,18 +102,18 @@
   padding: var(--spacing-xs) var(--spacing-s); // sass-lint:disable-line shorthand-values
   align-self: center; // fixes buttons next to tall elements inside one with `display: flex`
   border-radius: 1rem;
-  color: $lbry-white;
+  color: var(--lbry-white);
   transition: background-color 0.2s;
 
   &:not(:hover) {
-    background-color: $lbry-teal-5;
+    background-color: var(--lbry-teal-5);
   }
 
   &:hover {
-    background-color: $lbry-teal-3;
+    background-color: var(--lbry-teal-3);
 
     [data-mode="dark"] & {
-      background-color: $lbry-teal-4;
+      background-color: var(--lbry-teal-4);
     }
   }
 }

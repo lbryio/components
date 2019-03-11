@@ -29,19 +29,19 @@ form {
   [type="button"]:not(.button--link),
   [type="submit"],
   .button--primary {
-    color: $lbry-white;
+    color: var(--lbry-white);
     padding-right: var(--spacing-m);
     padding-left: var(--spacing-m);
     transition: all 0.2s;
 
     &:not(:hover) {
-      background-color: $lbry-black;
-      border-color: $lbry-black;
+      background-color: var(--lbry-black);
+      border-color: var(--lbry-black);
     }
 
     &:hover {
-      background-color: $lbry-teal-3;
-      border-color: $lbry-teal-5;
+      background-color: var(--lbry-teal-3);
+      border-color: var(--lbry-teal-5);
     }
   }
 
@@ -60,7 +60,7 @@ form {
 }
 
 fieldset {
-  border-top: 1px solid $lbry-gray-1;
+  border-top: 1px solid var(--lbry-gray-1);
   margin-bottom: var(--spacing-m);
   position: relative;
 }
@@ -86,7 +86,7 @@ fieldset-section {
   }
 
   label {
-    color: $lbry-gray-4;
+    color: var(--lbry-gray-4);
     display: inline-block;
     font-size: smaller;
     margin-bottom: var(--spacing-xxs);
@@ -99,11 +99,11 @@ fieldset-section {
   select,
   textarea {
     &:not(:focus) {
-      border-color: $lbry-black;
+      border-color: var(--lbry-black);
     }
 
     &:focus {
-      border-color: $lbry-teal-5;
+      border-color: var(--lbry-teal-5);
     }
   }
 
@@ -115,7 +115,7 @@ fieldset-section {
 
 legend {
   padding: var(--spacing-xs) var(--spacing-s); // sass-lint:disable-line shorthand-values
-  border: 1px solid $lbry-gray-1;
+  border: 1px solid var(--lbry-gray-1);
   margin-bottom: var(--spacing-s);
   pointer-events: none;
 }
@@ -128,17 +128,17 @@ input-submit {
     flex: 1;
 
     &:not(:focus) {
-      border-top-color: $lbry-black;
+      border-top-color: var(--lbry-black);
       border-right-color: transparent;
-      border-bottom-color: $lbry-black;
-      border-left-color: $lbry-black;
+      border-bottom-color: var(--lbry-black);
+      border-left-color: var(--lbry-black);
     }
 
     &:focus {
-      border-top-color: $lbry-teal-5;
+      border-top-color: var(--lbry-teal-5);
       border-right-color: transparent;
-      border-bottom-color: $lbry-teal-5;
-      border-left-color: $lbry-teal-5;
+      border-bottom-color: var(--lbry-teal-5);
+      border-left-color: var(--lbry-teal-5);
     }
   }
 }
@@ -149,7 +149,7 @@ checkbox-element {
   &:hover {
     checkbox-toggle,
     .checkbox-toggle {
-      border-color: $lbry-teal-4;
+      border-color: var(--lbry-teal-4);
     }
   }
 
@@ -168,7 +168,7 @@ checkbox-element {
 
       &:checked {
         + label {
-          color: $lbry-teal-4;
+          color: var(--lbry-teal-4);
         }
       }
     }
@@ -193,7 +193,7 @@ radio-element {
   &:hover {
     radio-toggle,
     .radio-toggle {
-      border-color: $lbry-teal-4;
+      border-color: var(--lbry-teal-4);
     }
   }
 
@@ -211,12 +211,12 @@ radio-element {
 
       &:checked {
         + label {
-          color: $lbry-teal-4;
+          color: var(--lbry-teal-4);
         }
 
         + label + radio-toggle::before,
         + label + .radio-toggle::before {
-          background-color: $lbry-teal-4;
+          background-color: var(--lbry-teal-4);
         }
       }
     }

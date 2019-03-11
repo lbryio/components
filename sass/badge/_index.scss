@@ -15,20 +15,20 @@
 }
 
 .badge--cost:not(.badge--large) {
-  background-color: $lbry-yellow-2;
-  color: $lbry-black;
+  background-color: var(--lbry-yellow-2);
+  color: var(--lbry-black);
 
   [data-mode="dark"] & {
-    background-color: $lbry-yellow-3;
+    background-color: var(--lbry-yellow-3);
   }
 }
 
 .badge--free {
-  background-color: $lbry-blue-2;
+  background-color: var(--lbry-blue-2);
 
   [data-mode="dark"] & {
-    background-color: $lbry-blue-3;
-    color: $lbry-black;
+    background-color: var(--lbry-blue-3);
+    color: var(--lbry-black);
   }
 }
 
@@ -38,20 +38,20 @@
 }
 
 .badge--nsfw {
-  background-color: $lbry-grape-2;
+  background-color: var(--lbry-grape-2);
 
   [data-mode="dark"] & {
-    background-color: $lbry-grape-3;
-    color: $lbry-black;
+    background-color: var(--lbry-grape-3);
+    color: var(--lbry-black);
   }
 }
 
 .badge--primary {
-  background-color: $lbry-teal-5;
-  color: $lbry-white;
+  background-color: var(--lbry-teal-5);
+  color: var(--lbry-white);
 }
 
 .badge--alert {
-  background-color: $lbry-red-2;
-  color: $lbry-white;
+  background-color: var(--lbry-red-2);
+  color: var(--lbry-white);
 }

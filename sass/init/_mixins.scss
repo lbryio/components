@@ -92,7 +92,7 @@
 @mixin line-clamp(
   $element-height: 2rem,
   $row-count: 2,
-  $fade-color: $lbry-white,
+  $fade-color: var(--lbry-white),
   $computed-position: relative
 ) {
   height: $element-height;
@@ -127,7 +127,7 @@
   animation-name: loading-animation;
   animation-timing-function: linear;
   background-color: transparent;
-  background-image: linear-gradient(to right, $lbry-gray-3 10%, transparent 80%, $lbry-gray-3 100%);
+  background-image: linear-gradient(to right, var(--lbry-gray-3) 10%, transparent 80%, var(--lbry-gray-3) 100%);
   background-repeat: repeat;
   background-size: 500px;
 
@@ -149,7 +149,7 @@
   }
 }
 
-@mixin selection($background-color: $lbry-white, $text-color: $lbry-black) {
+@mixin selection($background-color: var(--lbry-white), $text-color: var(--lbry-black)) {
   &::selection {
     background-color: $background-color;
     color: $text-color;
@@ -192,7 +192,7 @@
 
   &:hover {
     label {
-      color: $lbry-teal-4;
+      color: var(--lbry-teal-4);
     }
   }
 
@@ -222,7 +222,7 @@
   }
 }
 
-@mixin underline($text-color: $lbry-black, $whitespace-color: $lbry-white) {
+@mixin underline($text-color: var(--lbry-black), $whitespace-color: var(--lbry-white)) {
   @include selection($text-color, $whitespace-color);
 
   background-image: linear-gradient($whitespace-color, $whitespace-color), linear-gradient($whitespace-color, $whitespace-color), linear-gradient($text-color, $text-color);

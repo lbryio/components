@@ -20,6 +20,12 @@ html {
 [disabled] {
   pointer-events: none;
   resize: none;
+
+  &:hover {
+    background-color: inherit;
+    color: inherit;
+    fill: inherit;
+  }
 }
 
 [readonly] {
@@ -136,7 +142,7 @@ button {
 
 hr {
   width: 100%; height: 1px;
-  background-color: $lbry-gray-1;
+  background-color: var(--lbry-gray-1);
 }
 
 input {
@@ -180,7 +186,7 @@ textarea {
   // Intelligent print styles
   pre,
   blockquote {
-    border: 1px solid $lbry-gray-5 !important;
+    border: 1px solid var(--lbry-gray-5) !important;
     page-break-inside: avoid !important;
   }
 
@@ -217,7 +223,7 @@ textarea {
   * {
     background-color: transparent !important;
     background-image: none !important;
-    color: $lbry-black !important;
+    color: var(--lbry-black) !important;
     filter: none !important;
     text-shadow: none !important;
   }

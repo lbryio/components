@@ -178,7 +178,7 @@
 
 .media__text {
   [data-mode="dark"] & {
-    color: $lbry-white;
+    color: var(--lbry-white);
   }
 }
 

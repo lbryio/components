@@ -1,7 +1,7 @@
 
 table {
   width: 100%;
-  background-color: $lbry-white;
+  background-color: var(--lbry-white);
   position: relative;
 
   thead {
@@ -21,7 +21,7 @@ table {
   tr {
     &:not(:last-of-type) {
       td {
-        border-bottom: 1px solid $lbry-gray-1;
+        border-bottom: 1px solid var(--lbry-gray-1);
       }
     }
   }
@@ -32,7 +32,7 @@ table {
   }
 
   th {
-    border-bottom: 2px solid $lbry-black;
+    border-bottom: 2px solid var(--lbry-black);
     letter-spacing: 0.1rem;
     text-align: left;
     text-transform: uppercase;
