@@ -23,7 +23,7 @@ drawer-section {
   padding-right: 1rem;
   padding-left: 1rem;
 
-  &:not(:hover) {
+  &:not(:hover):not(.active) {
     drawer-title::after {
       background-color: transparent;
     }
@@ -34,7 +34,8 @@ drawer-section {
     }
   }
 
-  &:hover {
+  &:hover,
+  &.active {
     z-index: 3;
 
     drawer-title::after {
