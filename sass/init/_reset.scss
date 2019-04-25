@@ -71,9 +71,10 @@ textarea {
   -webkit-appearance: none;
 
   &:disabled {
-    border-color: var(--lbry-gray-4);
-    color: var(--lbry-gray-4);
-    cursor: default;
+    // sass-lint:disable-block no-important
+    border-color: var(--lbry-gray-4) !important;
+    color: var(--lbry-gray-4) !important;
+    cursor: default !important;
   }
 }
 
