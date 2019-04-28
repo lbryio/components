@@ -4,7 +4,6 @@ form {
     margin-bottom: var(--spacing-s);
   }
 
-  button:not(.button--link),
   input,
   select {
     height: var(--spacing-l);
@@ -26,9 +25,7 @@ form {
     transition: border 0.2s;
   }
 
-  [type="button"]:not(.button--link),
-  [type="submit"],
-  .button--primary {
+  [type="submit"] {
     color: var(--lbry-white);
     padding-right: var(--spacing-m);
     padding-left: var(--spacing-m);
