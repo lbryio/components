@@ -197,8 +197,11 @@
   }
 
   label {
-    padding-left: var(--spacing-xs);
+    left: -2rem;
+    padding-left: var(--spacing-l);
+    position: relative;
     transition: color 0.2s;
+    z-index: 1;
   }
 }
 
