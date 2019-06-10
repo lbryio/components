@@ -95,11 +95,9 @@ fieldset-section {
   [type="text"],
   select,
   textarea {
-    &:not([disabled]):not(:focus) {
-      border-color: var(--lbry-black);
-    }
+    border-color: var(--lbry-black);
 
-    &:not([disabled]):focus {
+    &:focus {
       border-color: var(--lbry-teal-5);
     }
   }
