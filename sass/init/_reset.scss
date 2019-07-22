@@ -158,9 +158,9 @@ input {
     opacity: 0.2;
   }
 
-  &:not(:disabled) {
-    color: inherit;
-  }
+  // &:not(:disabled) {
+  //   color: inherit;
+  // }
 
   &::-webkit-search-cancel-button {
     -webkit-appearance: none;
