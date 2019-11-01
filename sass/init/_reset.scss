@@ -10,8 +10,7 @@ html {
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
 
   border: none;
   box-sizing: inherit;
@@ -72,6 +71,9 @@ textarea {
   -webkit-appearance: none;
 
   &:disabled {
+    // sass-lint:disable-block no-important
+    border-color: var(--lbry-gray-4);
+    color: var(--lbry-gray-4);
     cursor: default;
   }
 }
@@ -83,7 +85,6 @@ h4,
 h5,
 h6 {
   font-weight: normal;
-  font-size: 1em;
 }
 
 ol,
@@ -93,6 +94,10 @@ ul {
   > li {
     list-style-position: inside;
   }
+}
+
+ul {
+  list-style-type: none;
 }
 
 table {
@@ -116,10 +121,8 @@ dt {
 }
 
 img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 100%;
+  width: auto; max-width: 100%;
+  height: auto; max-height: 100%;
   vertical-align: middle;
 }
 
@@ -142,9 +145,8 @@ button {
 }
 
 hr {
-  width: 100%;
-  height: 1px;
-  background-color: var(--color-gray-1);
+  width: 100%; height: 1px;
+  background-color: var(--lbry-gray-1);
 }
 
 input {
@@ -181,12 +183,14 @@ textarea {
   }
 }
 
+
+
 @media print {
   // sass-lint:disable-block no-important
   // Intelligent print styles
   pre,
   blockquote {
-    border: 1px solid var(--color-gray-5) !important;
+    border: 1px solid var(--lbry-gray-5) !important;
     page-break-inside: avoid !important;
   }
 
@@ -230,8 +234,7 @@ textarea {
 
   p {
     a {
-      &[href]::after {
-        // Show hypertext data for links and abbreviations
+      &[href]::after { // Show hypertext data for links and abbreviations
         content: " (" attr(href) ")" !important;
       }
 

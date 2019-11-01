@@ -1,6 +1,5 @@
 drawer-navigation {
-  width: 100%;
-  height: 5rem;
+  width: 100%; height: 5rem;
 
   display: inline-flex;
   flex: 1;
@@ -10,12 +9,9 @@ drawer-navigation {
   z-index: 10;
 }
 
-drawer-navigation-helper {
-  // This is to make mouse movement forgiving
-  width: 0;
-  height: 0;
-  top: 3rem;
-  left: -5rem;
+drawer-navigation-helper { // This is to make mouse movement forgiving
+  width: 0; height: 0;
+  top: 3rem; left: -5rem;
 
   border-right: 8rem solid transparent;
   border-bottom: 5rem solid transparent;
@@ -43,7 +39,7 @@ drawer-section {
     z-index: 3;
 
     drawer-title::after {
-      background-color: var(--color-primary);
+      background-color: var(--lbry-teal-4);
     }
   }
 }
@@ -58,10 +54,8 @@ drawer-title {
   z-index: 1;
 
   &::after {
-    width: 100%;
-    height: 1px;
-    bottom: -1px;
-    left: 0;
+    width: 100%; height: 1px;
+    bottom: -1px; left: 0;
 
     content: "";
     position: absolute;
@@ -71,22 +65,19 @@ drawer-title {
 
 drawer-wrap {
   width: 100%;
-  top: 5rem;
-  left: 0;
+  top: 5rem; left: 0;
 
-  background-color: var(--color-white);
-  border-top: 1px solid var(--color-gray-1);
+  background-color: var(--lbry-white);
+  border-top: 1px solid var(--lbry-gray-1);
   padding-top: 2rem;
   padding-bottom: 2rem;
   position: absolute;
 
   &::after {
-    width: 100vw;
-    height: calc(100vh - 5rem);
-    top: 5rem;
-    left: 0;
+    width: 100vw; height: calc(100vh - 5rem);
+    top: 5rem; left: 0;
 
-    background-color: var(--color-black);
+    background-color: var(--lbry-black);
     content: "";
     opacity: 0.3;
     pointer-events: none;
@@ -111,11 +102,11 @@ drawer-child {
   }
 
   &:hover {
-    border-color: var(--color-gray-1);
+    border-color: var(--lbry-gray-1);
     padding-left: var(--spacing-m);
 
     > a {
-      color: var(--lbry-primary);
+      color: var(--lbry-teal-4);
     }
   }
 
