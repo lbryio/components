@@ -22,7 +22,7 @@
   "homepage": "https://github.com/lbryio/components#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:sass && npm run sass:prod && git add -A :/"
+      "pre-commit": "npm run build && git add -A :/"
     }
   },
   "license": "BSD-3-Clause",
@@ -33,8 +33,8 @@
     "url": "https://github.com/lbryio/components.git"
   },
   "scripts": {
-    "sass:dev": "sass --load-path=node_modules --watch sass:dist --style compressed",
-    "sass:prod": "sass --load-path=node_modules --update sass:dist --style compressed",
+    "dev": "sass --load-path=node_modules --watch sass:dist --style compressed",
+    "build": "sass --load-path=node_modules --update sass:dist --style compressed",
     "test": "run-s test:*",
     "test:dependencies": "updates --update ./",
     "test:sass": "sass-lint --config ./node_modules/@inc/sasslint-config/config.json --verbose",
