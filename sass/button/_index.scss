@@ -1,73 +1,46 @@
 .button {
-  display: inline-block;
+  fill: currentColor;
   position: relative;
   white-space: nowrap;
-  text-decoration: none;
-  font-weight: 400;
-  cursor: pointer;
-
-  &:disabled {
-    opacity: 0.5;
-  }
-}
-
-.button--primary,
-.button--secondary,
-.button--alt,
-.button--link {
-  border-radius: var(--border-radius);
-}
-
-.button--primary,
-.button--secondary {
-  height: var(--height-button);
-  border-radius: var(--border-radius);
-  padding: var(--spacing-s) var(--spacing-m);
-  line-height: 1.2;
-
-  &:not(:last-of-type) {
-    margin-right: var(--spacing-s);
-  }
-}
-
-.button--primary {
-  background-color: var(--color-button-primary-bg);
-  color: var(--color-button-primary-text);
-
-  &:hover {
-    color: var(--color-button-primary-hover-text);
-    background-color: var(--color-button-primary-bg-hover);
-  }
-}
-
-.button--secondary {
-  background-color: var(--color-button-secondary-bg);
-  color: var(--color-button-secondary-text);
-
-  &:hover {
-    background-color: var(--color-button-secondary-bg-hover);
-  }
 }
 
 .button--alt {
-  color: var(--color-text);
-
   &:hover {
     text-decoration: underline;
+  }
+}
+
+.button--constrict {
+  @include constrict(20vw);
+}
+
+.button--disabled {
+  opacity: 0.3;
+
+  &:not([disabled]) {
+    pointer-events: none;
+
+    &:hover {
+      background-color: inherit;
+      color: inherit;
+      fill: inherit;
+    }
   }
 }
 
 .button--icon {
   width: 5rem;
   height: 5rem;
+  background-color: rgba($lbry-black, 0.7);
   background-repeat: no-repeat;
   background-size: 50%;
   border-radius: 50%;
+  color: var(--lbry-white);
   transition: background-color 0.2s;
-  background-color: var(--color-primary);
+
 
   &:hover {
-    background-color: var(--color-button-primary-bg-hover);
+    background-color: var(--lbry-green-3);
   }
 
   &.button--play {
@@ -81,12 +54,62 @@
   }
 }
 
+.button--inverse {
+  padding: var(--spacing-xs) var(--spacing-s); // sass-lint:disable-line shorthand-values
+  background-color: transparent;
+  border: 1px solid var(--lbry-gray-1);
+  border-radius: 1rem;
+  color: inherit;
+  transition: background-color 0.2s;
+
+  [data-mode="dark"] & {
+    border-color: rgba($lbry-white, 0.1);
+  }
+
+  &:hover {
+    background-color: var(--lbry-gray-1);
+
+    [data-mode="dark"] & {
+      background-color: rgba($lbry-white, 0.1);
+    }
+  }
+}
+
 .button--link {
-  color: var(--color-link);
+  color: var(--lbry-teal-5);
   transition: color 0.2s;
   word-break: break-all;
 
-  &:hover {
-    text-decoration: underline;
+  [data-mode="dark"] & {
+    color: var(--lbry-teal-3);
   }
+
+  &:hover {
+    color: var(--lbry-teal-3);
+
+    [data-mode="dark"] & {
+      color: var(--lbry-teal-4);
+    }
+  }
+}
+
+.button--primary {
+  padding: var(--spacing-xs) var(--spacing-s); // sass-lint:disable-line shorthand-values
+  align-self: center; // fixes buttons next to tall elements inside one with `display: flex`
+  background-color: var(--lbry-teal-5);
+  border-radius: 1rem;
+  color: var(--lbry-white);
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--lbry-teal-3);
+
+    [data-mode="dark"] & {
+      background-color: var(--lbry-teal-4);
+    }
+  }
+}
+
+.button--uppercase {
+  text-transform: uppercase;
 }
