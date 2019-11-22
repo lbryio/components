@@ -1,7 +1,7 @@
 {
   "author": {
-    "email": "paul+github@lbry.com",
-    "name": "Paul Anthony Webb"
+    "email": "sean@lbry.com",
+    "name": "Sean Yesmunt"
   },
   "bugs": {
     "url": "https://github.com/lbryio/components/issues"
@@ -40,5 +40,5 @@
     "test:sass": "sass-lint --config ./node_modules/@inc/sasslint-config/config.json --verbose",
     "watch": "npm run sass:dev"
   },
-  "version": "2.8.0"
+  "version": "3.0.0"
 }
