@@ -1,0 +1,23 @@
+.section {
+  margin-top: var(--spacing-l);
+}
+
+.section__actions {
+  display: flex;
+  align-items: center;
+  margin-top: var(--spacing-medium);
+
+  &:only-child {
+    margin-top: var(--spacing-xs);
+  }
+
+  > *:not(:last-child) {
+    margin-right: var(--spacing-medium);
+  }
+}
+
+.section__subtitle {
+  color: var(--color-text-subtitle);
+  margin: var(--spacing-small) 0;
+  font-size: var(--font-body);
+}

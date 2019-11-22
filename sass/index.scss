@@ -8,6 +8,32 @@
 @import "badge";
 @import "button";
 @import "form";
-@import "media";
-@import "navigation";
 @import "table";
+@import "section";
+
+// OLD - Deprecated
+@import "./navigation/index";
+
+body {
+  cursor: default;
+  font-weight: var(--font-weight-base);
+  font-size: var(--font-base);
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+*:focus:not(:hover) {
+  @include focus;
+}
+
+p {
+  font-size: 1em;
+}
+
+hr {
+  height: 1px;
+  background-color: var(--color-gray-2);
+}
