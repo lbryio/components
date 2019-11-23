@@ -30,6 +30,7 @@
   @extend .badge;
   background-color: var(--color-cost);
   color: var(--color-black);
+  line-height: 1;
 }
 
 .badge--free {
