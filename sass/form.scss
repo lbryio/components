@@ -136,7 +136,8 @@ input-submit {
   }
 
   // Hide the checkmark by default
-  input[type="checkbox"] + label::after {
+  input[type="checkbox"] + label::after,
+  input[type="radio"] + label::after {
     content: none;
   }
 
@@ -200,7 +201,7 @@ input-submit {
     border-radius: 50%;
     background-color: var(--color-secondary);
     left: 6px;
-    top: 7px;
+    top: 5px;
   }
 }
 
