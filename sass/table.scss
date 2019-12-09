@@ -84,16 +84,3 @@ td {
 .table__item--align-right {
   text-align: right;
 }
-
-.table__item--actionable {
-  vertical-align: middle;
-  white-space: nowrap;
-
-  .button {
-    vertical-align: top;
-    height: 2rem;
-    top: -0.2rem;
-    padding: var(--spacing-s);
-    margin-left: var(--spacing-m);
-  }
-}
