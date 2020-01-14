@@ -50,12 +50,14 @@ fieldset-group {
 }
 
 fieldset-section,
+form,
 .checkbox,
 .radio {
   display: flex;
   flex-direction: column;
 
   + fieldset-section,
+  + form,
   + .checkbox,
   + .radio {
     margin-top: var(--spacing-s);
