@@ -71,6 +71,10 @@ form,
   select {
     width: 100%;
   }
+
+  .button {
+    align-self: flex-start;
+  }
 }
 
 label {
