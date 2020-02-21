@@ -20,6 +20,14 @@ select {
     color: var(--color-input-placeholder);
     opacity: 0.4;
   }
+
+  &:disabled {
+    opacity: 0.4;
+
+    & + label {
+      opacity: 0.4;
+    }
+  }
 }
 
 checkbox-element,
