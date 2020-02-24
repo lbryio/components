@@ -122,6 +122,11 @@ input-submit {
     left: 0;
     padding: 0;
     background-color: transparent;
+
+    &:disabled + label {
+      cursor: default;
+      pointer-events: none;
+    }
   }
 
   label {
