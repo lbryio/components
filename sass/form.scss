@@ -28,6 +28,12 @@ select {
       opacity: 0.4;
     }
   }
+
+  &[type="range"] {
+    height: auto;
+    height: 0.5rem;
+    background-color: var(--color-secondary);
+  }
 }
 
 checkbox-element,
@@ -219,6 +225,24 @@ input-submit {
     background-color: var(--color-secondary);
     left: 6px;
     top: 5px;
+  }
+}
+
+.range__label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  > * {
+    width: 33%;
+    text-align: center;
+
+    &:first-of-type {
+      text-align: left;
+    }
+    &:last-of-type {
+      text-align: right;
+    }
   }
 }
 
