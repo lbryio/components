@@ -3,7 +3,6 @@
   position: relative;
   white-space: nowrap;
   text-decoration: none;
-  font-weight: 400;
   cursor: pointer;
 
   &:disabled {
@@ -19,15 +18,17 @@
 }
 
 .button--primary,
-.button--secondary {
+.button--secondary,
+.button--alt {
   height: var(--height-button);
   border-radius: var(--border-radius);
   padding: var(--spacing-s) var(--spacing-m);
   line-height: 1.2;
+  font-weight: var(--font-weight-bold);
+}
 
-  &:not(:last-of-type) {
-    margin-right: var(--spacing-s);
-  }
+.button--alt {
+  padding: var(--spacing-s) var(--spacing-s);
 }
 
 .button--primary {
@@ -50,10 +51,11 @@
 }
 
 .button--alt {
-  color: var(--color-text);
+  background-color: var(--color-button-alt-bg);
+  color: var(--color-button-alt-text);
 
   &:hover {
-    text-decoration: underline;
+    background-color: var(--color-button-alt-bg-hover);
   }
 }
 
