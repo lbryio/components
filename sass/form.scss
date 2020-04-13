@@ -67,9 +67,6 @@ fieldset-section,
 form,
 .checkbox,
 .radio {
-  display: flex;
-  flex-direction: column;
-
   + fieldset-section,
   + form,
   + .checkbox,
@@ -85,6 +82,13 @@ form,
   select {
     width: 100%;
   }
+}
+
+fieldset-section,
+.checkbox,
+.radio {
+  display: flex;
+  flex-direction: column;
 }
 
 label {
