@@ -87,6 +87,7 @@
   color: var(--color-link);
   transition: color 0.2s;
   word-break: break-all;
+  font-weight: var(--font-weight-bold);
 
   &:hover {
     text-decoration: underline;
