@@ -10,7 +10,7 @@
   --color-danger: #9b2023;
   --color-danger-alt: #fccdce;
   --color-warning: #fff58c;
-  --color-cost: #f4e866;
+  --color-cost: #ffd580;
   --color-focus: #93cff2;
   --color-border: #ddd;
 
@@ -60,8 +60,8 @@
   --color-table-highlight: var(--color-white-alt);
 
   // Tag
-  --color-tag: var(--color-primary);
-  --color-tag-bg: var(--color-primary-alt);
+  --color-tag: var(--color-gray-5);
+  --color-tag-bg: #f9fafb;
   --color-tag-hover: var(--color-white);
   --color-tag-bg-hover: var(--color-primary-alt-2);
 }
