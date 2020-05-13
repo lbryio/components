@@ -7,13 +7,12 @@
   --height-badge: 24px;
 
   // Spacing
-  --spacing-xxs: 0.2rem;
-  --spacing-xs: 0.4rem;
-  --spacing-s: 0.8rem;
-  --spacing-m: 1.6rem;
-  --spacing-l: 2.4rem;
-  --spacing-xl: 3.2rem;
-  --spacing-xxl: 6.4rem;
+  --spacing-xxs: calc(2rem / 5);
+  --spacing-xs: calc(2rem / 4);
+  --spacing-s: calc(2rem / 3);
+  --spacing-m: calc(2rem / 2);
+  --spacing-l: 2rem;
+  --spacing-xl: 3rem;
 
   // Aspect ratio
   --aspect-ratio-bluray: 41.6666666667%; // 12:5
