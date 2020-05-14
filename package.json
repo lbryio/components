@@ -40,5 +40,5 @@
     "test:sass": "sass-lint --config ./node_modules/@inc/sasslint-config/config.json --verbose",
     "watch": "npm run sass:dev"
   },
-  "version": "4.1.5"
+  "version": "4.2.0"
 }
