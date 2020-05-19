@@ -61,7 +61,7 @@
 
   // Tag
   --color-tag: var(--color-gray-5);
-  --color-tag-bg: #f9fafb;
-  --color-tag-hover: var(--color-white);
-  --color-tag-bg-hover: var(--color-primary-alt-2);
+  --color-tag-bg: var(--color-button-alt-bg);
+  --color-tag-hover: var(--color-button-alt-text);
+  --color-tag-bg-hover: var(--color-button-alt-bg-hover);
 }
