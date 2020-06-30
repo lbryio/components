@@ -66,12 +66,14 @@ fieldset-group {
 fieldset-section,
 form,
 .checkbox,
-.radio {
+.radio,
+.form-field--SimpleMDE {
   + fieldset-section,
   + form,
   + .checkbox,
-  + .radio {
-    margin-top: var(--spacing-m);
+  + .radio,
+  + .form-field--SimpleMDE {
+    margin-top: var(--spacing-l);
   }
 
   &:last-child {
