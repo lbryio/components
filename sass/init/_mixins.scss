@@ -104,7 +104,7 @@
   &::after {
     width: 50%;
     height: calc(#{$element-height} / #{$row-count});
-    right: 0;
+    inset-inline-end: 0;
     bottom: 0;
 
     background-image: linear-gradient(
@@ -186,7 +186,7 @@
   }
 
   &::before {
-    float: left;
+    float: inline-start;
     padding-top: var(--aspect-ratio-standard);
   }
 

@@ -9,8 +9,8 @@ select {
   color: var(--color-input);
   border-color: var(--color-input-border);
   background-color: var(--color-input-bg);
-  padding-right: var(--spacing-s);
-  padding-left: var(--spacing-s);
+  padding-inline-end: var(--spacing-s);
+  padding-inline-start: var(--spacing-s);
 
   &:focus {
     @include focus;
@@ -109,14 +109,14 @@ input-submit {
   }
 
   & > *:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right: none;
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+    border-inline-end: none;
   }
 
   & > *:nth-child(2) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
     border: 1px solid var(--color-border);
   }
 }
@@ -131,7 +131,7 @@ input-submit {
     width: var(--height-checkbox);
     position: absolute;
     border: none;
-    left: 0;
+    inset-inline-start: 0;
     padding: 0;
     background-color: transparent;
 
@@ -146,7 +146,7 @@ input-submit {
     display: inline-block;
     margin: 0;
     font-size: var(--font-base);
-    padding-left: calc(var(--height-checkbox) + var(--spacing-s));
+    padding-inline-start: calc(var(--height-checkbox) + var(--spacing-s));
     min-height: var(--height-checkbox);
 
     &::before {
@@ -191,8 +191,8 @@ input-submit {
     width: var(--height-checkbox);
     border: 1px solid var(--color-input-border);
     border-radius: var(--border-radius);
-    left: 0px;
-    top: -1px;
+    inset-inline-start: 0px;
+    inset-block-start: -1px;
   }
 
   // Checkmark of the fake checkbox
@@ -203,8 +203,8 @@ input-submit {
     border-bottom: 2px solid;
     border-color: var(--color-input-toggle);
     transform: rotate(-45deg);
-    left: 6px;
-    top: 6px;
+    inset-inline-start: 6px;
+    inset-block-start: 6px;
   }
 }
 
@@ -219,8 +219,8 @@ input-submit {
     width: var(--height-radio);
     border: 1px solid var(--color-input-border);
     border-radius: calc(var(--height-radio) * 0.5);
-    left: 0px;
-    top: -1px;
+    inset-inline-start: 0px;
+    inset-block-start: -1px;
   }
 
   // Checkmark of the fake radio
@@ -229,8 +229,8 @@ input-submit {
     width: 12px;
     border-radius: 50%;
     background-color: var(--color-secondary);
-    left: 6px;
-    top: 5px;
+    inset-inline-start: 6px;
+    inset-block-start: 5px;
   }
 }
 
@@ -244,10 +244,10 @@ input-submit {
     text-align: center;
 
     &:first-of-type {
-      text-align: left;
+      text-align: inline-start;
     }
     &:last-of-type {
-      text-align: right;
+      text-align: inline-end;
     }
   }
 }

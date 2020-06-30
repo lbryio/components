@@ -14,18 +14,18 @@ drawer-navigation-helper {
   // This is to make mouse movement forgiving
   width: 0;
   height: 0;
-  top: 3rem;
-  left: -5rem;
+  inset-block-start: 3rem;
+  inset-inline-start: -5rem;
 
-  border-right: 8rem solid transparent;
-  border-bottom: 5rem solid transparent;
-  border-left: 8rem solid transparent;
+  border-inline-end: 8rem solid transparent;
+  border-block-end: 5rem solid transparent;
+  border-inline-start: 8rem solid transparent;
   position: absolute;
 }
 
 drawer-section {
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-inline-end: 1rem;
+  padding-inline-start: 1rem;
 
   &:not(:hover):not(.active) {
     drawer-title::after {
@@ -60,8 +60,8 @@ drawer-title {
   &::after {
     width: 100%;
     height: 1px;
-    bottom: -1px;
-    left: 0;
+    inset-block-end: -1px;
+    inset-inline-start: 0;
 
     content: "";
     position: absolute;
@@ -71,20 +71,20 @@ drawer-title {
 
 drawer-wrap {
   width: 100%;
-  top: 5rem;
-  left: 0;
+  inset-block-start: 5rem;
+  inset-inline-start: 0;
 
   background-color: var(--color-white);
-  border-top: 1px solid var(--color-gray-1);
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  border-block-start: 1px solid var(--color-gray-1);
+  padding-block-start: 2rem;
+  padding-block-end: 2rem;
   position: absolute;
 
   &::after {
     width: 100vw;
     height: calc(100vh - 5rem);
-    top: 5rem;
-    left: 0;
+    inset-block-start: 5rem;
+    inset-inline-start: 0;
 
     background-color: var(--color-black);
     content: "";
@@ -112,7 +112,7 @@ drawer-child {
 
   &:hover {
     border-color: var(--color-gray-1);
-    padding-left: var(--spacing-m);
+    padding-inline-start: var(--spacing-m);
 
     > a {
       color: var(--lbry-primary);
@@ -129,7 +129,7 @@ drawer-child {
 
   span {
     display: flex;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    padding-block-start: 0.25rem;
+    padding-block-end: 0.25rem;
   }
 }
