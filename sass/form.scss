@@ -64,16 +64,23 @@ fieldset-group {
 }
 
 fieldset-section,
+fieldset-group,
 form,
 .checkbox,
 .radio,
-.form-field--SimpleMDE {
+.form-field--SimpleMDE,
+.form-field__help {
   + fieldset-section,
+  + fieldset-group,
   + form,
   + .checkbox,
   + .radio,
   + .form-field--SimpleMDE {
     margin-top: var(--spacing-l);
+  }
+
+  + .form-field__help {
+    margin-top: var(--spacing-s);
   }
 
   &:last-child {

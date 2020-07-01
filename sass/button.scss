@@ -90,3 +90,8 @@
     color: var(--color-link-hover);
   }
 }
+
+.button--danger {
+  @extend .button--link;
+  color: var(--color-error);
+}
